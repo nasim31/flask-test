@@ -40,6 +40,10 @@ def post_something():
             "ERROR": "no name found, please send a name."
         })
 
+@app.route('/app/')
+def hello():
+    return redirect("https://google.com", code=302)
+
 # A welcome message to test our server
 @app.route('/')
 def index():
