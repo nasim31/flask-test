@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 app = Flask(__name__)
 
 @app.route('/getmsg/', methods=['GET'])
@@ -42,7 +42,7 @@ def post_something():
 
 @app.route('/app/')
 def hello():
-    return redirect("https://google.com", code=302)
+    return redirect("https://play.google.com/store/apps/details?id=com.sabjibag.app", code=302)
 
 # A welcome message to test our server
 @app.route('/')
